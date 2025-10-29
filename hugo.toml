@@ -1,0 +1,62 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Blog'
+theme = 'fuji-new'
+
+summaryLength = 10 # Custom summary length, add <!--more--> in post file to custom split point
+[pagination]
+pagerSize = 10
+
+# Posts shown in homepage
+mainSections = ["posts"]
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true # Enable user to embed HTML snippets in Markdown content
+[markup.highlight]
+codeFences = false # Disable Hugo's code highlighter
+
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 3
+
+[taxonomies]
+tag = "tags"
+
+[menu]
+[[menu.nav]]
+name = "Home"
+url = "/"
+weight = 1
+[[menu.nav]]
+name = "Archives"
+url = "/archives/"
+weight = 2
+[[menu.nav]]
+name = "About"
+url = "/about/"
+weight = 3
+[[menu.nav]]
+name = "Search"
+url = "/search/"
+weight = 4
+[[menu.nav]]
+name = "RSS"
+url = "/index.xml"
+weight = 5
+
+[[menu.link]]
+name = "Jack Ceroni"
+url = "https://lucaman99.github.io"
+weight = 1
+[[menu.link]]
+name = "Twitter"
+url = "https://twitter.com/dsrkafuu"
+weight = 2
+
+[build]
+noJSConfigInAssets = true
+
+[security]
+enableInlineShortcodes = true
